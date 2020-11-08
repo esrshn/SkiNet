@@ -77,3 +77,16 @@ Repository Pattern Goals
 .More classes/interfaces - less duplicate code
 .Business logic further away from data
 .Harder to optimise certain operations against the data source
+
+Add new migration before drop database
+---------------------------------------
+dotnet ef database drop -p Infrastructure -s API
+dotnet ef migrations remove -p Infrastructure -s API
+dotnet ef migrations add InitialCreate -p Infrastructure -s API -o Data/Migrations
+
+Add Infrastructure project new ProductConfiguration class
+----------------------------------------------------------
+dotnet ef migrations remove -p Infrastructure -s API
+dotnet ef migrations add InitialCreate -p Infrastructure -s API -o Data/Migrations
+ 
+

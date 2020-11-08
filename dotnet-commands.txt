@@ -53,3 +53,15 @@ git add .
 git commit -m "Initial Commit"
 git remote add origin https://...
 git push -o origin master 
+
+Application Architecture
+------------------------
+.API
+  .Controllers
+.Core
+  .Entities
+  .Interfaces
+.Infrastructure
+  .DbContext
+  .Repository
+  .Services

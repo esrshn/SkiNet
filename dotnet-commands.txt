@@ -65,3 +65,15 @@ Application Architecture
   .DbContext
   .Repository
   .Services
+
+Repository Pattern Goals
+-------------------------
+.Decouple business code from data access
+.Seperation of concerns
+.Minimise duplicate query logic
+.Testability
+.Increased level of abstraction
+.Increased maintainability, flexibility, testability
+.More classes/interfaces - less duplicate code
+.Business logic further away from data
+.Harder to optimise certain operations against the data source

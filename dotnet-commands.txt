@@ -1,0 +1,53 @@
+dotnet new sln
+dotnet new webapi -o API
+dotnet sln add API
+dotnet sln list
+dotnet dev-certs https -t
+
+dotnet watch run
+
+installed .net core sdk
+-----------------------
+dotnet --info
+
+installing dotnet ef tools
+---------------------------
+dotnet tool install --global dotnet-ef
+dotnet ef -h
+
+create migration and database update
+--------------------------------------
+dotnet ef migrations add InitialCreate -o Data/Migrations
+dotnet ef database -h
+dotnet ef database update
+
+create new projects
+--------------------------------------
+dotnet new -h
+
+dotnet new classlib -o Core
+dotnet new classlib -o Infrastructure
+
+dotnet sln add Core
+dotnet sln add Infrastructure
+
+Add project references
+--------------------------------------
+cd API
+dotnet add reference ../Infrastructure
+cd ..
+cd Infrastructure
+dotnet add reference ../Core
+cd ..
+dotnet restore 
+
+dotnet build
+cd API
+dotnet watch run
+
+git operations
+---------------
+git status
+git init
+git add .
+

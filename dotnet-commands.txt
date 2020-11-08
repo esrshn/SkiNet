@@ -50,4 +50,6 @@ git operations
 git status
 git init
 git add .
-
+git commit -m "Initial Commit"
+git remote add origin https://...
+git push -o origin master 
